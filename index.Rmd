@@ -40,10 +40,10 @@ The mathematical formula for calculating the BMI involves height and weight of a
 The height and weight have to be in the same unit system: either 'Metric' i.e height in metres and weight in kilograms or alternatively 'English' i.e height in inches and weight in pounds(lbs).
 
 The Metric system formula is:
-$$WeightInKgs / HeightInMts ^ 2$$
+$$WeightInKgs \over HeightInMts ^ 2$$
 
 The English system formula is:
-$$(WeightInLbs / HeightInInches ^ 2) * 703$$
+$$\left(WeightInLbs \over HeightInInches ^ 2\right) * 703$$
 
 --- .class #id 
 
