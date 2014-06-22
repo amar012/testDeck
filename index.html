@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test deck</title>
+  <title>Body Mass Index (BMI) Calculator</title>
   <meta charset="utf-8">
-  <meta name="description" content="Test deck">
+  <meta name="description" content="Body Mass Index (BMI) Calculator">
   <meta name="author" content="">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Test deck</h1>
-    <h2></h2>
-    <p><br/></p>
+    <h1>Body Mass Index (BMI) Calculator</h1>
+    <h2>Slidify Presentation about - A Shiny App</h2>
+    <p><br/>Coursera Student</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,14 +43,18 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>What is Body Mass Index (BMI)?</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <p>BMI stands for Body Mass Index. In recent times it has become important to monitor one&#39;s BMI, with alarming increase in obesity (and consequent risk of cardio-vascular disease, diabete, hyper-tension) across all classes and sections of every society in the world. The BMI is calculated from one&#39;s height and weight. It is a fairly reliable indicator of body fat for most adults, with athletes and the elderly being two exceptions. BMI is an inexpensive alternative to direct measurements of body fat.</p>
+
+<p>The Centers for Disease Control and Prevention uses BMI to define terms like overweight and obese: </p>
+
+<pre><code>Underweight: BMI below 18.5
+Normal weight: 18.5 to 24.9
+Overweight: 25.0 to 29.9
+Obese: 30.0 and above.
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -58,13 +62,60 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>About the App</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">plot(1:10, 1:10)
+    <p>The Body Mass Index (BMI) of a person can be calculated if the person&#39;s height and weight are given. However both height and weight can be given either in Metric System or English System, as both the systems are still popular. As the user may wish to use either unit system, the App provides a choice to the user to choose either system.</p>
+
+<p>Normally, this choice is presented to the user through a tabbed interface. However, in this App, the choice is presented through a common and seamless interface by dynamically changing the Input Elements for height and weight, based on the user&#39;s choice of unit system.</p>
+
+<p>This interface gives the App a sleek, seamless, fast, less confusing and smooth interface. This makes for better look and user experience, compared to tabbed calculators.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The Formula For BMI Calculation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The mathematical formula for calculating the BMI involves height and weight of a person.</p>
+
+<p>The height and weight have to be in the same unit system: either &#39;Metric&#39; i.e height in metres and weight in kilograms or alternatively &#39;English&#39; i.e height in inches and weight in pounds(lbs).</p>
+
+<p>The Metric system formula is:
+\[WeightInKgs / HeightInMts ^ 2\]</p>
+
+<p>The English system formula is:
+\[(WeightInLbs / HeightInInches ^ 2) * 703\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Example BMI Calculation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>For example, if the height of a person is 5 feet 10 inches and weight is 78  kgs., the height in Metric System is 1.778 mts and wight in English system is 171.961 lbs.</p>
+
+<p>So BMI calculation in Metric System is:</p>
+
+<pre><code class="r">ht = 1.778; wt = 78; bmi = wt / (ht ^ 2); round(bmi,1)
 </code></pre>
 
-<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<pre><code>## [1] 24.7
+</code></pre>
+
+<p>BMI calculation in English System is:</p>
+
+<pre><code class="r">ht = 5 * 12 + 10; wt = 171.961; bmi = (wt / (ht ^ 2)) * 703; round(bmi,1)
+</code></pre>
+
+<pre><code>## [1] 24.7
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,14 +127,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='What is Body Mass Index (BMI)?'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='About the App'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Formula For BMI Calculation'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example BMI Calculation'>
+         4
       </a>
     </li>
   </ul>
@@ -96,7 +159,21 @@
 </body>
   <!-- Load Javascripts for Widgets -->
   
-  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
   <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <!-- DONE LOADING HIGHLIGHTER JS FILES -->
